@@ -11,13 +11,13 @@ import CoreLocation
 import MapKit
 
 class WeatherMapViewModel: ObservableObject {
-// MARK:   published variables
+    // MARK:   published variables
     @Published var weatherDataModel: WeatherDataModel?
     @Published var city = "London"
     @Published var coordinates: CLLocationCoordinate2D?
     @Published var region: MKCoordinateRegion = MKCoordinateRegion()
     init() {
-// MARK:  create Task to load London weather data when the app first launches
+        // MARK:  create Task to load London weather data when the app first launches
         Task {
             do {
                 try await getCoordinatesForCity()
@@ -31,13 +31,13 @@ class WeatherMapViewModel: ObservableObject {
         }
     }
     func getCoordinatesForCity() async throws {
-// MARK:  complete the code to get user coordinates for user entered place
-// and specify the map region
-
+        // MARK:  complete the code to get user coordinates for user entered place
+        // and specify the map region
+        
         let geocoder = CLGeocoder()
         if let placemarks = try? await geocoder.geocodeAddressString(city),
            let location = placemarks.first?.location?.coordinate {
-
+            
             DispatchQueue.main.async {
                 self.coordinates = location
                 self.region = MKCoordinateRegion(center: location, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))

@@ -82,14 +82,13 @@ struct WeatherNowView: View {
                                 
                                 Label {
                                     Spacer(minLength: 5)
-                                        .frame(maxWidth: 40, alignment: .center)
+                                        .frame(maxWidth: 50)
                                     Text("\(currentDescription.rawValue.capitalized)")
                                         .font(.system(size: 25, weight: .medium))
                                         .padding(.top)
                                         .frame(alignment: .leading)
                                 } icon: {
-                                    Image(currentIcon)
-                                        .resizable()
+                                    AsyncImage(url: URL(string: "https://openweathermap.org/img/wn/\(currentIcon).png"))
                                         .frame(width: 40, height: 40)
                                 }
                             }
