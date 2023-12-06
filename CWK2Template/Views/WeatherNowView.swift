@@ -46,7 +46,7 @@ struct WeatherNowView: View {
                 .font(.custom("Arial", size: 26))
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .cornerRadius(15)
-                
+                                
                 VStack{
                     HStack{
                         Text("Current Location: \(weatherMapViewModel.city)")
@@ -63,14 +63,15 @@ struct WeatherNowView: View {
                     let timestamp = TimeInterval(weatherMapViewModel.weatherDataModel?.current.dt ?? 0)
                     let formattedDate = DateFormatterUtils.formattedDateTime(from: timestamp)
                     Text(formattedDate)
-                        .padding()
+                        .padding(.bottom)
                         .font(.title)
                         .foregroundColor(.black)
                         .shadow(color: .black, radius: 1)
                 }
+                .padding(.bottom)
                 
-                VStack(alignment: .leading, spacing: 10){
-                    HStack{
+                VStack(alignment: .leading, spacing: 20){
+                    HStack(spacing: 10){
                         // Current Weather Description
                         if let forecast = weatherMapViewModel.weatherDataModel {
                             let weatherArray = forecast.current.weather
@@ -119,7 +120,7 @@ struct WeatherNowView: View {
                         }
                     }
                     
-                    HStack{
+                    HStack(spacing: 10){
                         // Weather Humidity Value
                         if let forecast = weatherMapViewModel.weatherDataModel {
                             Label {
@@ -139,7 +140,7 @@ struct WeatherNowView: View {
                         }
                     }
                     
-                    HStack{
+                    HStack(spacing: 10){
                         //Current Pressure Value
                         if let forecast = weatherMapViewModel.weatherDataModel {
                             Label {
@@ -159,7 +160,7 @@ struct WeatherNowView: View {
                         }
                     }
                     
-                    HStack{
+                    HStack(spacing: 10){
                         //Current Wind Speed Value
                         if let forecast = weatherMapViewModel.weatherDataModel {
                             Label {
@@ -180,6 +181,7 @@ struct WeatherNowView: View {
                     }
                 }
             }
+            .position(CGPoint(x: 200, y: 350))
         }
     }
     struct WeatherNowView_Previews: PreviewProvider {
