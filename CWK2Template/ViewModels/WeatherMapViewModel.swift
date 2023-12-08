@@ -37,16 +37,13 @@ class WeatherMapViewModel: ObservableObject {
         let geocoder = CLGeocoder()
         if let placemarks = try? await geocoder.geocodeAddressString(city),
            let location = placemarks.first?.location?.coordinate {
-            
-            DispatchQueue.main.async {
-                self.coordinates = location
-                self.region = MKCoordinateRegion(center: location, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-            }
-            
+        
+            self.coordinates = location
+            self.region = MKCoordinateRegion(center: location, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+
            let data = try await loadData(lat: coordinates?.latitude ?? 0.00, lon: coordinates?.longitude ?? 0.00)
             print("Weather data loaded: \(String(describing: data.timezone))")
 
-            
         } else {
             // Handle error here if geocoding fails
             print("Error: Unable to find the coordinates for the club.")
