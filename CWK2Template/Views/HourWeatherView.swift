@@ -15,9 +15,8 @@ struct HourWeatherView: View {
         VStack(alignment: .leading, spacing: 5) {
             Text(formattedDate)
                 .font(.body)
-
                 .padding(.horizontal)
-                .background(Color.white)
+                .padding(.vertical)
                 .foregroundColor(.black)
 
             Text("Add style & other elements")
@@ -26,11 +25,11 @@ struct HourWeatherView: View {
                 .multilineTextAlignment(.leading)
                 .lineLimit(nil) 
                 .padding(.horizontal)
-                .background(Color.white)
+                .padding(.vertical)
                 .foregroundColor(.black)
         }
-        
-    }
+        .background(Color.blue)
+        .cornerRadius(5)    }
 }
 
 
