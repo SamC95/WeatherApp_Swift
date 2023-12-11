@@ -20,11 +20,10 @@ class WeatherMapViewModel: ObservableObject {
         // MARK:  create Task to load London weather data when the app first launches
         Task {
             do {
+                // func gets London on initial run of the program
                 try await getCoordinatesForCity()
-                let weatherData = try await loadData(lat: coordinates?.latitude ?? 51.503300, lon: coordinates?.longitude ?? -0.079400)
-                print("Weather data loaded: \(String(describing: weatherData.timezone))")
-                
-            } catch {
+            } 
+            catch {
                 // Handle errors if necessary
                 print("Error loading weather data: \(error)")
             }
@@ -41,7 +40,7 @@ class WeatherMapViewModel: ObservableObject {
             self.coordinates = location
             self.region = MKCoordinateRegion(center: location, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
 
-           let data = try await loadData(lat: coordinates?.latitude ?? 0.00, lon: coordinates?.longitude ?? 0.00)
+           let data = try await loadData(lat: coordinates?.latitude ?? 51.503300, lon: coordinates?.longitude ?? -0.079400)
             print("Weather data loaded: \(String(describing: data.timezone))")
 
         } else {
