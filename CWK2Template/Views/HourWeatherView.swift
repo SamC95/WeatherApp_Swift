@@ -16,10 +16,9 @@ struct HourWeatherView: View {
         let hourlyTemp = current.temp
         let hourlyDescription = current.weather.first?.weatherDescription
         
-        VStack(alignment: .center, spacing: 5) {
+        VStack(alignment: .center, spacing: 10) {
             Text(formattedDate)
                 .font(.body)
-                .padding(.horizontal)
                 .padding(.top)
                 .foregroundColor(.black)
             
@@ -31,15 +30,13 @@ struct HourWeatherView: View {
                 .font(.body)
                 .multilineTextAlignment(.leading)
                 .lineLimit(nil) 
-                .padding(.horizontal)
                 .foregroundColor(.black)
             
             Text(hourlyDescription?.rawValue.capitalized ?? "")
                 .frame(width: 125)
-                .font(.body)
+                .font(.system(size: 14))
                 .multilineTextAlignment(.leading)
                 .lineLimit(nil)
-                .padding(.horizontal)
                 .padding(.bottom)
                 .foregroundColor(.black)
         }

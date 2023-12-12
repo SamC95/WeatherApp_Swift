@@ -114,7 +114,7 @@ struct WeatherNowView: View {
                             Label {
                                 Spacer(minLength: 5)
                                     .frame(maxWidth: 50)
-                                Text("Temp: \((Double)(forecast.current.temp), specifier: "%.2f") ºC")
+                                Text("Temp: \((Double)(forecast.current.temp), specifier: "%.0f") ºC")
                                     .font(.system(size: 25, weight: .medium))
                             } icon: {
                                 Image("temperature")
