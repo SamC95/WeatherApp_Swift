@@ -16,7 +16,7 @@ struct HourWeatherView: View {
         let hourlyTemp = current.temp
         let hourlyDescription = current.weather.first?.weatherDescription
         
-        VStack(alignment: .center, spacing: 10) {
+        VStack(alignment: .center, spacing: 5) {
             Text(formattedDate)
                 .font(.body)
                 .padding(.top)
@@ -24,6 +24,8 @@ struct HourWeatherView: View {
             
             AsyncImage(url: URL(string: "https://openweathermap.org/img/wn/\(weatherIcon ?? "").png"))
                 .frame(height: 40)
+                .padding(.top, 8)
+                .padding(.bottom, 8)
                 
             Text(String(format: "%.0f\u{00B0}C", hourlyTemp))
                 .frame(width: 125)
@@ -35,8 +37,9 @@ struct HourWeatherView: View {
             Text(hourlyDescription?.rawValue.capitalized ?? "")
                 .frame(width: 125)
                 .font(.system(size: 14))
-                .multilineTextAlignment(.leading)
+                .multilineTextAlignment(.center)
                 .lineLimit(nil)
+                .padding(.horizontal, 6)
                 .padding(.bottom)
                 .foregroundColor(.black)
         }

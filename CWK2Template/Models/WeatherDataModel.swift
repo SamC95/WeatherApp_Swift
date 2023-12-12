@@ -121,6 +121,7 @@ enum Description: String, Codable {
     case thunderstormWithLightDrizzle = "thunderstorm with light drizzle"
     case thunderstormWithDrizzle = "thunderstorm with drizzle"
     case thunderstormWithHeavyDrizzle = "thunderstorm with heavy drizzle"
+    case lightIntensityDrizzle = "light intensity drizzle"
     case heavyIntensityDrizzle = "heavy intensity drizzle"
     case lightIntensityDrizzleRain = "light intensity drizzle rain"
     case drizzleRain = "drizzle rain"

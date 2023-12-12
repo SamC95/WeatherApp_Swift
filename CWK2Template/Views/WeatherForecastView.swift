@@ -10,12 +10,12 @@ import SwiftUI
 struct WeatherForecastView: View {
     @EnvironmentObject var weatherMapViewModel: WeatherMapViewModel
     var body: some View {
-            NavigationView {
-                ZStack{
-                    Color(red: 176 / 255, green: 207 / 255, blue: 236 / 255)
-                        .edgesIgnoringSafeArea(.all)
-                        .frame(width: 365, height: 285)
-                        .offset(CGSize(width: 0, height: -250.0))
+        NavigationView {
+            ZStack{
+                Color(red: 176 / 255, green: 207 / 255, blue: 236 / 255)
+                    .edgesIgnoringSafeArea(.all)
+                    .frame(width: 365, height: 285)
+                    .offset(CGSize(width: 0, height: -250.0))
                 ScrollView{
                     VStack(alignment: .leading, spacing: 16) {
                         if let hourlyData = weatherMapViewModel.weatherDataModel?.hourly {
@@ -45,7 +45,7 @@ struct WeatherForecastView: View {
                             .frame(height: 500)
                         }
                     }
-                    .padding(.horizontal, 16)
+                    .padding(.horizontal, 14)
                 }
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
