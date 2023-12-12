@@ -11,6 +11,7 @@ struct WeatherNowView: View {
     @EnvironmentObject var weatherMapViewModel: WeatherMapViewModel
     @State private var isLoading = false
     @State private var temporaryCity = ""
+    
     var body: some View {
         ZStack {
             Image("sky")

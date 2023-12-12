@@ -42,7 +42,7 @@ class WeatherMapViewModel: ObservableObject {
                 self.region = MKCoordinateRegion(center: location, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
             }
             
-            let data = try await loadData(lat: coordinates?.latitude ?? 51.503300, lon: coordinates?.longitude ?? -0.079400)
+            let data = try await loadData(lat: location.latitude, lon: location.longitude )
             print("Weather data loaded: \(String(describing: data.timezone))")
 
         } else {
@@ -64,7 +64,6 @@ class WeatherMapViewModel: ObservableObject {
                     self.weatherDataModel = weatherDataModel
                     print("weatherDataModel loaded")
                 }
-
 
 // MARK:  The code below is to help you see number of records and different time stamps that has been retrieved as part of api response.
  

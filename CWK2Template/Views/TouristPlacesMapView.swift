@@ -13,13 +13,13 @@ import MapKit
 struct TouristPlacesMapView: View {
     @EnvironmentObject var weatherMapViewModel: WeatherMapViewModel
     @State var locations: [Location] = []
-    @State var  mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.5216871, longitude: -0.1391574), latitudinalMeters: 600, longitudinalMeters: 600)
+    @State var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.5216871, longitude: -0.1391574), latitudinalMeters: 600, longitudinalMeters: 600)
     var body: some View {
         NavigationView {
             VStack(spacing: 5) {
                 if weatherMapViewModel.coordinates != nil {
                     VStack(spacing: 10){
-                        Map(coordinateRegion: $mapRegion, showsUserLocation: true)
+                        Map(coordinateRegion: $weatherMapViewModel.region, showsUserLocation: true)
                             .edgesIgnoringSafeArea(.all)
                             .frame(height: 300)
                         VStack{
