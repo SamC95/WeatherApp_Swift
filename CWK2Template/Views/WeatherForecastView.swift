@@ -45,6 +45,7 @@ struct WeatherForecastView: View {
                             .frame(height: 500)
                         }
                     }
+                    .listStyle(PlainListStyle())
                     .padding(.horizontal, 14)
                 }
                 .navigationBarTitleDisplayMode(.inline)
