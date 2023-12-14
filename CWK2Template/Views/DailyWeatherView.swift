@@ -35,6 +35,7 @@ struct DailyWeatherView: View {
                     fatalError()
                 }
             }
+            .foregroundStyle(.black)
             
             VStack{
                 Text(weatherDescription?.rawValue.capitalized ?? "")
@@ -68,6 +69,8 @@ struct DailyWeatherView: View {
                     .foregroundColor(.black)
             }
         }
+        .frame(height: 40)
+        .background(Image("background").opacity(0.03))
     }
 }
 
