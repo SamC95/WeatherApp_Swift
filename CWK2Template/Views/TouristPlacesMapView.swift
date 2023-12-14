@@ -62,7 +62,7 @@ struct TouristPlacesMapView: View {
                 updateRegion()
                 
                 if (weatherMapViewModel.coordinates != nil) {
-                    locations = weatherMapViewModel.loadLocationsFromJSONFile(cityName: weatherMapViewModel.city)!
+                    locations = weatherMapViewModel.loadLocationsFromJSONFile(cityName: weatherMapViewModel.city) ?? []
                 }
             }
         }

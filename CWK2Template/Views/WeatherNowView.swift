@@ -96,7 +96,7 @@ struct WeatherNowView: View {
                                     Text("\(currentDescription.rawValue.capitalized)")
                                         .font(.system(size: 25, weight: .medium))
                                         .padding(.top)
-                                        .frame(alignment: .leading)
+                                        .frame(alignment: .center)
                                 } icon: {
                                     AsyncImage(url: URL(string: "https://openweathermap.org/img/wn/\(currentIcon).png"))
                                         .frame(width: 40, height: 40)
