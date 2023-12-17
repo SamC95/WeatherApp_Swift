@@ -19,10 +19,20 @@ struct TouristPlacesMapView: View {
             VStack(spacing: 5) {
                 if weatherMapViewModel.coordinates != nil {
                     VStack(spacing: 10){
-                        Map(coordinateRegion: $mapRegion, showsUserLocation: true)
+                        Map(coordinateRegion: $mapRegion, showsUserLocation: true, annotationItems: locations) { location in
+                            MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: location.coordinates.latitude, longitude: location.coordinates.longitude)) {
+                                VStack{
+                                    Image(systemName: "mappin.circle.fill")
+                                        .resizable()
+                                        .frame(width: 20, height: 20)
+                                        .foregroundColor(.red)
+                                }
+                            }
+                        }
                             .offset(y: -65)
                             .edgesIgnoringSafeArea(.all)
                             .frame(width: 500, height: 300)
+                        
                         VStack{
                             Text("Tourist Attractions in \(weatherMapViewModel.city)")
                         }
@@ -76,11 +86,10 @@ struct TouristPlacesMapView: View {
             mapRegion = MKCoordinateRegion(center: weatherMapViewModel.coordinates ?? CLLocationCoordinate2D(latitude: 0.00, longitude: 0.00), latitudinalMeters: 4000, longitudinalMeters: 4000)
         }
     }
-}
-
-
-struct TouristPlacesMapView_Previews: PreviewProvider {
-    static var previews: some View {
-        TouristPlacesMapView().environmentObject(WeatherMapViewModel())
+    
+    struct TouristPlacesMapView_Previews: PreviewProvider {
+        static var previews: some View {
+            TouristPlacesMapView().environmentObject(WeatherMapViewModel())
+        }
     }
 }
