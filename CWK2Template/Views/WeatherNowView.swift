@@ -89,14 +89,16 @@ struct WeatherNowView: View {
                             if let first = weatherArray.first {
                                 let currentDescription = first.weatherDescription
                                 let currentIcon = first.icon
-                                
+                                    Spacer(minLength: 20)
                                 Label {
-                                    Spacer(minLength: 5)
-                                        .frame(maxWidth: 50)
+                                    Spacer()
                                     Text("\(currentDescription.rawValue.capitalized)")
                                         .font(.system(size: 25, weight: .medium))
                                         .padding(.top)
                                         .frame(alignment: .center)
+                                        .multilineTextAlignment(.center)
+                                    Spacer()
+                                    Spacer()
                                 } icon: {
                                     AsyncImage(url: URL(string: "https://openweathermap.org/img/wn/\(currentIcon).png"))
                                         .frame(width: 40, height: 40)
@@ -112,11 +114,13 @@ struct WeatherNowView: View {
                     HStack(spacing: 10){
                         // Weather Temperature Value
                         if let forecast = weatherMapViewModel.weatherDataModel {
+                            Spacer(minLength: 20)
                             Label {
-                                Spacer(minLength: 5)
-                                    .frame(maxWidth: 50)
+                                Spacer()
                                 Text("Temp: \((Double)(forecast.current.temp), specifier: "%.0f") ºC")
                                     .font(.system(size: 25, weight: .medium))
+                                Spacer()
+                                Spacer()
                             } icon: {
                                 Image("temperature")
                                     .resizable()
@@ -132,11 +136,13 @@ struct WeatherNowView: View {
                     HStack(spacing: 10){
                         // Weather Humidity Value
                         if let forecast = weatherMapViewModel.weatherDataModel {
+                            Spacer(minLength: 20)
                             Label {
-                                Spacer(minLength: 5)
-                                    .frame(maxWidth: 45)
+                                Spacer()
                                 Text("Humidity: \(forecast.current.humidity) %")
                                     .font(.system(size: 25, weight: .medium))
+                                Spacer()
+                                Spacer()
                             } icon: {
                                 Image("humidity")
                                     .resizable()
@@ -152,11 +158,13 @@ struct WeatherNowView: View {
                     HStack(spacing: 10){
                         //Current Pressure Value
                         if let forecast = weatherMapViewModel.weatherDataModel {
+                            Spacer(minLength: 20)
                             Label {
-                                Spacer(minLength: 5)
-                                    .frame(maxWidth: 20)
+                                Spacer()
                                 Text("Pressure: \(forecast.current.pressure) hPa")
                                     .font(.system(size: 25, weight: .medium))
+                                Spacer()
+                                Spacer()
                             } icon: {
                                 Image("pressure")
                                     .resizable()
@@ -172,11 +180,13 @@ struct WeatherNowView: View {
                     HStack(spacing: 10){
                         //Current Wind Speed Value
                         if let forecast = weatherMapViewModel.weatherDataModel {
+                            Spacer(minLength: 20)
                             Label {
-                                Spacer(minLength: 5)
-                                    .frame(maxWidth: 20)
+                                Spacer()
                                 Text("Windspeed: \((Double)(forecast.current.windSpeed), specifier: "%.2f") mph")
                                     .font(.system(size: 25, weight: .medium))
+                                Spacer()
+                                Spacer()
                             } icon: {
                                 Image("windSpeed")
                                     .resizable()
