@@ -18,7 +18,7 @@ struct NavBar: View {
                 .tabItem {
                     Label("Forecast", systemImage: "calendar")
                 }
-            TouristPlacesMapView()
+            TouristPlacesMapView(locationName: "")
                 .tabItem {
                     Label("Place Map", systemImage: "map")
                 }

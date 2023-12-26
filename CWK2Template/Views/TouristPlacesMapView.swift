@@ -14,6 +14,8 @@ struct TouristPlacesMapView: View {
     @EnvironmentObject var weatherMapViewModel: WeatherMapViewModel
     @State var locations: [Location] = []
     @State var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.5216871, longitude: -0.1391574), latitudinalMeters: 11500, longitudinalMeters: 11500)
+    @State var locationName: String
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 5) {
@@ -56,7 +58,20 @@ struct TouristPlacesMapView: View {
                             Text("\(location.name)")
                                 .font(.subheadline)
                                 .foregroundColor(.gray)
+                            Spacer()
+                            Spacer()
+                            
+                            NavigationLink(destination: TouristPlacesInfoView(locationName: locationName)) {
+                                
+                            }
+                            .frame(width: 20, height: 20)
+                            Spacer(minLength: 40)
                         }
+                        .onTapGesture {
+                            locationName = location.name
+                            print(locationName)
+                        }
+                        .frame(width: 350, height: 100, alignment: .center)
                     }
                 }
                 .listStyle(PlainListStyle())
@@ -89,7 +104,7 @@ struct TouristPlacesMapView: View {
     
     struct TouristPlacesMapView_Previews: PreviewProvider {
         static var previews: some View {
-            TouristPlacesMapView().environmentObject(WeatherMapViewModel())
+            TouristPlacesMapView(locationName: "").environmentObject(WeatherMapViewModel())
         }
     }
 }
