@@ -61,15 +61,13 @@ struct TouristPlacesMapView: View {
                             Spacer()
                             Spacer()
                             
-                            NavigationLink(destination: TouristPlacesInfoView(locationName: locationName)) {
-                                
-                            }
+                            NavigationLink(destination: TouristPlacesInfoView(locationName: locationName)
+                                .onAppear {
+                                    locationName = location.name
+                                }
+                            ){}
                             .frame(width: 20, height: 20)
                             Spacer(minLength: 40)
-                        }
-                        .onTapGesture {
-                            locationName = location.name
-                            print(locationName)
                         }
                         .frame(width: 350, height: 100, alignment: .center)
                     }
