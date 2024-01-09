@@ -16,6 +16,7 @@ struct TouristPlacesInfoView: View {
         return locations.first { $0.name == locationName }
     }
     
+    // Background image with attraction name, city name, images, description and a wikipedia link
     var body: some View {
         NavigationView {
             ZStack{
@@ -67,8 +68,9 @@ struct TouristPlacesInfoView: View {
                             .multilineTextAlignment(.center)
                             .frame(width: 350, height: 50)
                         
+                        // Checks that the attraction link is not nil, if it isn't then displays a link to wikipedia page
                         if (touristAttraction?.link != nil) {
-                            Link("\(touristAttraction?.link ?? "Error: No link found")", destination: URL(string: touristAttraction?.link ?? "") ?? URL(string: "www.wikipedia.org")!)
+                            Link("\(touristAttraction?.link ?? "Error: No link found")", destination: URL(string: touristAttraction?.link ?? "") ?? URL(string: "en.wikipedia.org")!)
                                 .font(.system(size: 14))
                                 .multilineTextAlignment(.center)
                                 .frame(width: 350, height: 10)
