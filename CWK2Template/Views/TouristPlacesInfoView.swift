@@ -67,11 +67,18 @@ struct TouristPlacesInfoView: View {
                             .multilineTextAlignment(.center)
                             .frame(width: 350, height: 50)
                         
-                        Text("\(touristAttraction?.link ?? "Error: No link found")")
-                            .font(.system(size: 14))
-                            .multilineTextAlignment(.center)
-                            .frame(width: 350, height: 10)
-                        
+                        if (touristAttraction?.link != nil) {
+                            Link("\(touristAttraction?.link ?? "Error: No link found")", destination: URL(string: touristAttraction?.link ?? "") ?? URL(string: "www.wikipedia.org")!)
+                                .font(.system(size: 14))
+                                .multilineTextAlignment(.center)
+                                .frame(width: 350, height: 10)
+                        }
+                        else {
+                            Text("\(touristAttraction?.link ?? "Error: No link found")")
+                                .font(.system(size: 14))
+                                .multilineTextAlignment(.center)
+                                .frame(width: 350, height: 10)
+                        }
                         Spacer()
                     }
                 }
@@ -108,13 +115,24 @@ struct TouristPlacesInfoView: View {
  tourist attraction such as with New York in this program, the view will instead
  have a grey box's that represent where images would be.
  
- I believe this addition provides a useful and practical addition to the application
- from the user perspective by allowing them to gain a extra information on the given
- tourist attraction beyond what the map view provides.
+ I have also implemented the wikipedia link that is included in places.json for the
+ tourist attractions. I have done this by first using an if condition to check that the
+ value is not nil to prevent crashes. If it is not nil then the link will be displayed as
+ clickable, if it does for some reason retrieve a nil value then it should instead just
+ display the link as text that is not clickable. I was unsure if this is an acceptable
+ approach to using a force-unwrap as I know they are generally not the ideal approach due
+ to the risk of crashes, but I have tested it thoroughly with the mentioned if block and
+ encountered no crashes or bugs.
  
- I considered implementing the Wikipedia link as an actual link, however I was unsure
- if from a coursework perspective, I should be allowing the application to move away
- from the application and into Safari instead, even if it would have had a button
- to easily return to the application.
+ When the link is clicked it will open in Safari, there is a button provided by the OS to
+ return to the weather app, it is worth noting for performance factors of the
+ emulator that opening these links and pressing back to the app will not close the pages
+ on the Safari browser app.
+ 
+ This extra view provides beneficial context to the user on what each tourist attraction is
+ and whether they may want to visit it, in a way that is clear from a UI/UX standpoint. It
+ also allows for the use of more of the provided json data from a development standpoint.
+ As such I feel this is an addition that naturally extends the purpose of the app in a
+ way that doesn't alter the overall style.
  ----------------------------------------
  */
