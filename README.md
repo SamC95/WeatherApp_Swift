@@ -8,14 +8,14 @@ The project builds upon an initial starting template provided by my module lectu
 The API Key is no longer active, please include your own from [OpenWeather](https://openweathermap.org/) using the One Call API 3.0 service; if running the application.
 
 ## Contents
-* [Project Brief]()
-* [Approach]()
-* [Technologies]()
-* [Responsibilities]()
-* [Key Learnings]()
-* [Achievements]()
-* [Challenges]()
-* [Conclusions]()
+* [Project Brief](https://github.com/SamC95/WeatherApp_Swift/tree/main#project-brief)
+* [Approach](https://github.com/SamC95/WeatherApp_Swift/tree/main#approach)
+* [Technologies](https://github.com/SamC95/WeatherApp_Swift/tree/main#technologies)
+* [Responsibilities](https://github.com/SamC95/WeatherApp_Swift/tree/main#responsibilities)
+* [Key Learnings](https://github.com/SamC95/WeatherApp_Swift/tree/main#key-learnings)
+* [Achievements](https://github.com/SamC95/WeatherApp_Swift/tree/main#achievements)
+* [Challenges](https://github.com/SamC95/WeatherApp_Swift/tree/main#challenges)
+* [Conclusions](https://github.com/SamC95/WeatherApp_Swift/tree/main#conclusions)
 
 ## Project Brief
 * When the app launches for the first time, a user will see the current weather for London including the date and time.
@@ -183,10 +183,10 @@ var body: some View {
 Below shows screenshots of my final implementation of the requirements, along with my extra component that provides extra details about the specific tourist attraction.
 
 <p float="left">
-  <img width="210" alt="Screenshot 2024-05-07 at 17 52 54" src="https://github.com/SamC95/WeatherApp_Swift/assets/132593571/fbb40f54-596e-4374-9771-7335cf0e676b">
-  <img width="210" alt="Screenshot 2024-05-07 at 17 54 53" src="https://github.com/SamC95/WeatherApp_Swift/assets/132593571/c75e4ec9-e546-4818-a74a-d13a7a157496">
-  <img width="210" alt="Screenshot 2024-05-07 at 17 55 41" src="https://github.com/SamC95/WeatherApp_Swift/assets/132593571/b9bf2b07-7432-4246-9fdd-3a8901be8b3e">
-  <img width="210" alt="Screenshot 2024-05-07 at 17 56 20" src="https://github.com/SamC95/WeatherApp_Swift/assets/132593571/5b327317-b00a-40a6-849c-bcc3d6b63f9b">
+  <img width="190" alt="Screenshot 2024-05-07 at 17 52 54" src="https://github.com/SamC95/WeatherApp_Swift/assets/132593571/fbb40f54-596e-4374-9771-7335cf0e676b">
+  <img width="190" alt="Screenshot 2024-05-07 at 17 54 53" src="https://github.com/SamC95/WeatherApp_Swift/assets/132593571/c75e4ec9-e546-4818-a74a-d13a7a157496">
+  <img width="190" alt="Screenshot 2024-05-07 at 17 55 41" src="https://github.com/SamC95/WeatherApp_Swift/assets/132593571/b9bf2b07-7432-4246-9fdd-3a8901be8b3e">
+  <img width="190" alt="Screenshot 2024-05-07 at 17 56 20" src="https://github.com/SamC95/WeatherApp_Swift/assets/132593571/5b327317-b00a-40a6-849c-bcc3d6b63f9b">
 </p>
 
 ## Key Learnings
