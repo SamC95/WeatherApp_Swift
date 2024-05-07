@@ -19,7 +19,7 @@ The API Key is no longer active, please include your own from [OpenWeather](http
 
 ## Project Brief
 * When the app launches for the first time, a user will see the current weather for London including the date and time.
-* Forecast tab gives a rich weather view of the current location, with a top part a scrollable view showing a summary of hourly weather for the next 48 hours and the bottom part a vertically scrollable view showing summarised weather for each of the following next 8 days for the location from City tab.
+* Forecast tab gives a rich weather view of the current location, with the top part a horizontal scrollable view showing a summary of hourly weather for the next 48 hours and the bottom part a vertically scrollable view showing summarised weather for each of the following next 8 days for the location from City tab.
 * Places tab is a compound view with a top part showing a map with pins of tourist attraction places and the bottom part a scrollable list of the tourist places loaded from file data, if there is data relating to the location.
 * When the user changes the location in City tab, all other views must also change and load relevant data for this new place.
 * The app interface follows Apple guidelines.
