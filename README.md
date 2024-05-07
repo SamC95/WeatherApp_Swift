@@ -23,7 +23,7 @@ The API Key is no longer active, please include your own from [OpenWeather](http
 * Places tab is a compound view with a top part showing a map with pins of tourist attraction places and the bottom part a scrollable list of the tourist places loaded from file data, if there is data relating to the location.
 * When the user changes the location in City tab, all other views must also change and load relevant data for this new place.
 * The app interface follows Apple guidelines.
-* The app interacttion is consistent
+* The app interaction is consistent
 * The app data should be formatted correctly.
 * The app interface should match the images provided.
 * The application must be built using SwiftUI, CoreLocation, MapKit Frameworks and the Openweather API. Frameworks or Libraries such as Pods, Lottie, SDWebImage, WeatherKit, UIKit and others are not allowed.
