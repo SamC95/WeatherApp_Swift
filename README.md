@@ -11,7 +11,7 @@ The API Key is no longer active, please include your own from [OpenWeather](http
 * [Project Brief](https://github.com/SamC95/WeatherApp_Swift/tree/main#project-brief)
 * [Approach](https://github.com/SamC95/WeatherApp_Swift/tree/main#approach)
 * [Technologies](https://github.com/SamC95/WeatherApp_Swift/tree/main#technologies)
-* [Responsibilities](https://github.com/SamC95/WeatherApp_Swift/tree/main#responsibilities)
+* [Implementation](https://github.com/SamC95/WeatherApp_Swift/tree/main#implementation)
 * [Key Learnings](https://github.com/SamC95/WeatherApp_Swift/tree/main#key-learnings)
 * [Achievements](https://github.com/SamC95/WeatherApp_Swift/tree/main#achievements)
 * [Challenges](https://github.com/SamC95/WeatherApp_Swift/tree/main#challenges)
@@ -49,7 +49,7 @@ As such, the core design goal of the project was to get the specified functional
 
 [OpenWeather API](https://openweathermap.org/)
 
-## Responsibilities
+## Implementation
 
 Since the project was based on the use of a provided template, a lot of the initial structure was already defined. As such the aim was to implement the necessary functionality to allow the application to use the OpenWeather API dynamically to retrieve results for any location.
 
