@@ -45,7 +45,6 @@ As such, the core design goal of the project was to get the specified functional
 
 ![Static Badge](https://img.shields.io/badge/Swift-%23F05138?style=for-the-badge&logo=Swift&logoColor=white)  
 ![Static Badge](https://img.shields.io/badge/Xcode-%23147EFB?style=for-the-badge&logo=Xcode&logoColor=white)  
-![image](https://camo.githubusercontent.com/5d4f07e411a7b968c9a1c2c46a5b97945aefeda4d7fd643bb93c10525cfefa3f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4a534f4e2d2532333030303030303f7374796c653d666f722d7468652d6261646765266c6f676f3d4a534f4e266c6f676f436f6c6f723d7768697465)
 
 [OpenWeather API](https://openweathermap.org/)
 
